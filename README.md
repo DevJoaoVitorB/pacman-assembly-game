@@ -60,8 +60,8 @@ Para jogar, você precisa:
 
 Siga os passos abaixo para executar o jogo corretamente no MARS MIPS:
 
-1. Instale o Java em seu computador  
-2. Baixe e abra o MARS MIPS  
+1. Instale o [Java](https://www.java.com/pt-BR/) em seu computador  
+2. Baixe e abra o [MARS MIPS](https://github.com/dpetersanderson/MARS/)  
 3. No MARS, carregue o arquivo `.asm` do projeto  
 4. No menu superior, acesse:  
    **Tools → Bitmap Display**  
