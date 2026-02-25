@@ -1,5 +1,7 @@
 # 🟡 Pacman Clássico em Assembly (MARS MIPS)
 
+![Pacman Game](pacman.gif)
+
 ## 📖 Descrição
 
 Este projeto é uma recriação do clássico **Pacman** em um ambiente 2D,
