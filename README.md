@@ -1,99 +1,171 @@
-# 🟡 Pacman Clássico em Assembly (MARS MIPS)
+# 🟡 Pacman Clássico de 1980 em Assembly (MARS MIPS)
 
-![Pacman Game](pacman.gif)
+![Gameplay](docs/pacman.gif)
 
-## 📖 Descrição
+Recriação do **clássico jogo de 1980 do Pacman** desenvolvido utilizando **Assembly MIPS** na ferramenta **MARS**. O projeto tem como objetivo demonstrar a construção de um jogo completo em linguagem de baixo nível, explorando conceitos de movimentação, controle de estados, interação com o usuário e gerenciamento de fases.
 
-Este projeto é uma recriação do clássico **Pacman** em um ambiente 2D,
-desenvolvido utilizando linguagem de baixo nível Assembly através da
-ferramenta **Java MARS MIPS**.
-
-O objetivo principal do jogo é controlar o personagem pelo labirinto
-coletando todas as bolinhas brancas enquanto evita os fantasmas. O jogo
-foi construído com foco em lógica de movimentação, controle de estados e
-manipulação direta de instruções em Assembly.
+### Status do Projeto: ✅ Concluído
 
 <br>
 
-## 🎮 Mecânicas do Jogo
+## 📋 Sobre o Projeto
 
--   O jogo possui 2 fases de labirinto
--   Cada fase contém 3 fantasmas clássicos:
-    -   Fantasma Rosa
-    -   Fantasma Vermelho
-    -   Fantasma Laranja
--   O jogador deve:
-    -   Coletar todas as bolinhas brancas do mapa
-    -   Evitar contato com qualquer fantasma
--   Controles de movimento:
-    -   W → Cima
-    -   A → Esquerda
-    -   S → Baixo
-    -   D → Direita
--   O jogo inicia quando o jogador começa a se mover
+O **Pacman Clássico de 1980 em Assembly** é um projeto acadêmico desenvolvido para aplicar conceitos fundamentais da programação em baixo nível utilizando a arquitetura MIPS.
+
+O jogo reproduz a experiência clássica do Pacman, onde o jogador deve percorrer um labirinto coletando todas as bolinhas disponíveis enquanto evita os fantasmas que circulam pelo mapa.
+
+### Objetivo
+
+Desenvolver um jogo funcional utilizando exclusivamente Assembly MIPS, colocando em prática conceitos de lógica computacional, controle de fluxo, manipulação de memória e interação com dispositivos de entrada e saída simulados.
+
+### Problema Resolvido
+
+Projetos de programação geralmente utilizam linguagens de alto nível, abstraindo diversos processos internos. Este projeto busca demonstrar como funcionalidades comuns de um jogo podem ser implementadas diretamente em uma linguagem de baixo nível, proporcionando uma compreensão mais profunda da arquitetura computacional.
 
 <br>
 
-## 🧠 Regras de Progressão
+## ✨ Funcionalidades
 
--   Ao coletar todas as bolinhas da Fase 1, o jogador avança para a
-    Fase 2
--   Se o jogador perder em qualquer fase:
-    -   A tela Game Over é exibida
-    -   O progresso é reiniciado desde a primeira fase
--   Se o jogador completar as duas fases:
-    -   A tela You Win é exibida
-    -   O jogo reinicia automaticamente
+### Funcionalidades Implementadas
 
-<br>
-
-## 🖥️ Requisitos para Executar
-
-Para jogar, você precisa:
-
--   Java instalado na máquina
--   Ferramenta MARS MIPS
--   Sistema operacional compatível com Java
--   Teclado para controle do personagem
+* [x] Movimentação do jogador utilizando teclado
+* [x] Sistema de coleta de pontos
+* [x] Duas fases jogáveis
+* [x] Sistema de progressão entre fases
+* [x] Três fantasmas por fase
+* [x] Detecção de colisão com inimigos
+* [x] Tela de vitória
+* [x] Tela de derrota (Game Over)
+* [x] Reinicialização automática da partida
+* [x] Renderização gráfica utilizando Bitmap Display
 
 <br>
 
-## ▶️ Como Executar
+## 🛠️ Tecnologias Utilizadas
 
-Siga os passos abaixo para executar o jogo corretamente no MARS MIPS:
+### Ferramentas
 
-1. Instale o [Java](https://www.java.com/pt-BR/) em seu computador  
-2. Baixe e abra o [MARS MIPS](https://github.com/dpetersanderson/MARS/)  
-3. No MARS, carregue o arquivo `.asm` do projeto  
-4. No menu superior, acesse:  
-   **Tools → Bitmap Display**  
-   → Esta será a tela onde o jogo será exibido  
-5. Na janela aberta, configure:
-   - **Unit Width in Pixels** = 4  
-   - **Unit Height in Pixels** = 4  
-6. Clique em **Connect to MIPS**  
-7. No menu superior, acesse:  
-   **Tools → Keyboard and Display MMIO Simulator**  
-   → Esta será a janela de entrada de comandos do jogador  
-8. Clique em **Connect to MIPS** nesta janela também  
-9. Execute o programa clicando nos botões **Icone de Ferramentas** → **Run/Play** do MARS  
-10. Clique na área **Keyboard** e utilize as teclas:
+![Tools](https://skillicons.dev/icons?i=git,github)
 
-   - `W` → Cima  
-   - `A` → Esquerda  
-   - `S` → Baixo  
-   - `D` → Direita  
-
-O jogo inicia assim que o jogador começa a se mover.
+* **MARS MIPS Simulator**
+* **Java Runtime Environment (JRE)**
 
 <br>
 
-## 🎯 Objetivo Acadêmico
+## 🏗️ Arquitetura do Projeto
 
-Este projeto foi desenvolvido com fins educacionais para demonstrar:
+O projeto segue uma arquitetura procedural típica de aplicações desenvolvidas em Assembly.
 
--   Programação em Assembly MIPS
--   Lógica de jogos em baixo nível
--   Controle de fluxo e estados
--   Manipulação de entrada do usuário
--   Estruturação de um jogo completo em ambiente simulado
+Características principais:
+
+* Controle de fluxo por rótulos (labels)
+* Manipulação direta de registradores
+* Gerenciamento manual de estados do jogo
+* Controle de entrada via MMIO
+* Renderização gráfica utilizando Bitmap Display do MARS
+* Estrutura baseada em rotinas e sub-rotinas
+
+<br>
+
+## 📂 Estrutura de Diretórios
+
+```text
+pacman-assembly-game/
+│
+├── src/                 # Código-fonte Assembly do jogo
+│   └── pacman.asm       # Arquivo principal do projeto
+│
+├── docs/                # Documentação do projeto
+│   └── pacman.gif       # Demonstração do jogo
+│
+└── README.md
+```
+
+<br>
+
+## ⚙️ Pré-requisitos
+
+Antes de iniciar, você precisará ter instalado:
+
+* [Java](https://www.java.com/pt-BR/)
+* [MARS MIPS Simulator](https://github.com/dpetersanderson/MARS/) 
+
+<br>
+
+## 🚀 Como Executar
+
+### 1. Clonar o Repositório
+
+```bash
+git clone https://github.com/DevJoaoVitorB/pacman-assembly-game.git
+```
+
+### 2. Abrir o Projeto no MARS
+
+Carregue o arquivo `.asm` principal do projeto.
+
+### 3. Configurar o Bitmap Display
+
+No menu superior:
+
+```text
+Tools → Bitmap Display
+# Esta será a tela onde o jogo será exibido
+```
+
+Configure:
+
+```text
+Unit Width in Pixels  = 4
+Unit Height in Pixels = 4
+```
+
+Clique em:
+
+```text
+Connect to MIPS
+```
+
+### 5. Configurar o Teclado
+
+No menu superior:
+
+```text
+Tools → Keyboard and Display MMIO Simulator
+# Esta será a janela de entrada de comandos do jogador
+```
+
+Clique em:
+
+```text
+Connect to MIPS
+```
+
+### 6. Executar o Jogo
+
+Clique em:
+
+```text
+Run → Assemble
+Run → Go
+```
+
+### 7. Controles
+
+```text
+W → Mover para cima
+A → Mover para esquerda
+S → Mover para baixo
+D → Mover para direita
+```
+
+O jogo inicia assim que o jogador realiza o primeiro movimento.
+
+<br>
+
+## 👨‍💻 Autor
+
+| **DevJoaoVitorB** |
+| ----------------- |
+| ![Foto de Perfil - DevJoaoVitorB](https://avatars.githubusercontent.com/u/182047578?s=100&v=4) |
+| [![GitHub](https://skillicons.dev/icons?i=github)](https://github.com/DevJoaoVitorB) [![Linkedin](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/devjoaovitorb) |
