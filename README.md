@@ -87,6 +87,7 @@ pacman-assembly-game/
 
 Antes de iniciar, você precisará ter instalado:
 
+* [Git (recomendado](https://git-scm.com/install//windows)
 * [Java](https://www.java.com/pt-BR/)
 * [MARS MIPS Simulator](https://github.com/dpetersanderson/MARS/) 
 
